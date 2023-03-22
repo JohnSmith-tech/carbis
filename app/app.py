@@ -84,8 +84,11 @@ class App:
                         else:
                             os.system("cls")
                             print("Адрес: ", response_geocode[0]["result"])
-                            print("Широта: ", response_geocode[0]["geo_lat"])
-                            print("Долгота: ", response_geocode[0]["geo_lon"])
+                            if response_geocode[0]['geo_lat'] == None and response_geocode[0]["geo_lon"] == None:
+                                print("Географические координаты определить не удалось")
+                            else:
+                                print("Широта: ", response_geocode[0]["geo_lat"])
+                                print("Долгота: ", response_geocode[0]["geo_lon"])
 
                 menu.address = None
 
