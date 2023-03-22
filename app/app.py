@@ -57,10 +57,12 @@ class App:
                         menu.address, settings.language)
 
                 except ResponseException:
+                    os.system("cls")
                     print(
                         "Доступ к запрошенному ресурсу запрещен\nПроверьте правильность ввода токена и секретного ключа")
 
                 except DadataException:
+                    os.system("cls")
                     print("Ошибка. Проверьте правильность url для автодополнения")
 
                 else:
@@ -74,10 +76,12 @@ class App:
                                 response_suggestions["suggestions"][id_address]["value"])
 
                         except ResponseException:
+                            os.system("cls")
                             print(
                                 "Доступ к запрошенному ресурсу запрещен\nПроверьте правильность ввода токена и секретного ключа")
 
                         except DadataException:
+                            os.system("cls")
                             print(
                                 "Ошибка. Проверьте правильность url для геокодирования")
 
